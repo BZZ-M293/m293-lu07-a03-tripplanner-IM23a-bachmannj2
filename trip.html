@@ -1,14 +1,107 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Reisebuchungs-Formular</title>
+    <meta charset="UTF-8">
+    <title>Reisebuchungs-Formular</title>
 
 </head>
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
 
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+    <fieldset>
+        <label>Abflughafen:
+            <select name="abflughafen" size="5">
+                <optgroup label="Schweiz">
+                    <option>Bern</option>
+                    <option>zürich</option>
+                    <option>Graubünden</option>
+                </optgroup>
+                <optgroup label="Deutschland">
+                    <option>Berlin</option>
+                    <option>München</option>
+                    <option>Hamburg</option>
+                </optgroup>
+                <optgroup label="Frankreich">
+                    <option>Paris</option>
+                    <option>Colmar</option>
+                    <option>Rennes</option>
+                </optgroup>
 
+            </select>
+        </label>
+    </fieldset>
+    <fieldset>
+        <input type="radio" id="ho" name="unterkunft" value="hotel">
+        <label for="ho"> Hotel</label>
+        <input type="radio" id="hs" name="unterkunft" value="hostel">
+        <label for="hs"> Hostel</label>
+        <input type="radio" id="fe" name="unterkunft" value="ferienwohnung">
+        <label for="fe"> Ferienwohnung</label>
+    </fieldset>
+    <fieldset>
+        <input type="checkbox" name="dienstleistungen[]" value="reiseversicherung" id="check1" checked>
+        <label for="check1">reiseversicherung</label>
+        <input type="checkbox" name="dienstleistungen[]" value="koffertransport" id="check2">
+        <label for="check2">Koffer Transport</label>
+        <input type="checkbox" name="dienstleistungen[]" value="loakalbus" id="check3">
+        <label for="check3">loakales Busticket</label>
+    </fieldset>
+    <fieldset>
+        <label for="anfang"> Anfangzeitpunkt</label>
+        <input id="anfang" type="date">
+        <label for="end"> Endzeitpunkt</label>
+        <input id="end" type="date">
+        <label for="dauer"> Reisedauer (Tagen)</label>
+        <input id="dauer" type="number" min="1" max="21">
+    </fieldset>
+    <fieldset>
+        <label for="personen"> Anzahlpersonen</label>
+        <input id="personen" type="number">
+    </fieldset>
+    <fieldset>
+        <label>Flugzeug gesellschaft:
+            <select name="abflughafen" size="3">
+                <option>Boeng</option>
+                <option>Easy Jet</option>
+                <option>Swiss</option>
+                <option>Lufthansa</option>
+                <option>Emirates</option>
+            </select>
+        </label>
+    </fieldset>
+    <fieldset>
+        <input type="checkbox" name="dienstleistung[]" value="priority-check-in" id="check11" checked>
+        <label for="check11">Priority-Check-In</label>
+        <input type="checkbox" name="dienstleistung[]" value="mietwagen" id="check12">
+        <label for="check12">Mietwagen</label>
+        <input type="checkbox" name="dienstleistung[]" value="handgepaeck" id="check13">
+        <label for="check13">zusätzliches Handgepäck</label>
+    </fieldset>
+    <fieldset>
+        <label> reiseziel
+            <input type="search" list="reiseziele" />
+            <datalist id="reiseziele">
+                <option value="Berlin">
+                <option value="Zürich">
+                <option value="Paris">
+                <option value="Tokyo">
+                <option value="Los Angeles">
+                <option value="New York">
+                <option value="Neu Seeland">
+                <option value="Rom">
+                <option value="Moskau">
+                <option value="Ohio">
+            </datalist>
+        </label>
+    </fieldset>
+    <fieldset>
+        <label for="email"> E-mail</label>
+        <input id="email" type="email">
+    </fieldset>
+    <button type="reset">zurücksetzen</button>
+    <button type="submit">zurücksetzen</button>
+</form>
 </body>
 </html>
